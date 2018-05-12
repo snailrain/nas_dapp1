@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>星云-by 星云区块链</title>
+    <link href="./css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/uilts/requestAnimationFrame.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/element/Star.js"></script>
+    <script type="text/javascript" src="js/element/Particle.js"></script>
+    <script type="text/javascript" src="js/element/Smoke.js"></script>
+    <script type="text/javascript" src="js/element/InitCanvas.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src=lib/nebPay.js></script>
+    <script type="text/javascript" src=lib/nebulas.js></script>
+    <script type="text/javascript" src="js/contract/dapp.js"></script>
+</head>
+
+<body class="body">
+    <canvas id="canvas_app" class="first">
+        <p class="noCanvas">
+            你需要一个
+            <a href="http://www.google.com/chrome">牛逼的浏览器</a>。
+        </p>
+    </canvas>
+    <img class="second" src="img/bg.png" />
+    <div class="btn-group tooltip-show" style="position:absolute;" data-toggle="tooltip" title="点击此处，曲速至其他星系">
+        <button id="ddmButton" type="button" class="btn btn-default dropdown-toggle"
+                data-toggle="dropdown">
+            曲速至其他星系 <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">太阳系</a></li>
+            <li><a href="#">三体</a></li>
+            <li><a href="#">歌者</a></li>
+            <li><a href="#">归零者</a></li>
+            <li><a href="#">流浪星系</a></li>
+            <li><a href="#">边缘星系</a></li>
+            <!--<li class="divider"></li>
+            <li><a href="#">分离的链接</a></li>-->
+        </ul>
+    </div>
+    <div class="starChain"></div>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        <!--标题-->
+                    </h4>
+                    <span id="spanPosition"></span>
+                </div>
+                <div class="modal-body" id="divStoryContent">
+                    <!--正文-->
+
+                </div>
+                <div id="divForm" class="modal-body form-group" style="padding-bottom:0px">
+                    <input type="text" class="form-control" placeholder="星球名称" max="10" id="inputStarName" />
+
+                    <textarea id="txtContent" class="form-control" style="height:150px" maxlength="300" placeholder="这是一颗记录在区块链上的星星。                                         您可以在这里填写星球故事，或者给朋友写一封信。"></textarea>
+
+                    <input id="inputAuthor" type="text" class="form-control" placeholder="您的昵称" max="10" />
+
+                </div>
+                <div class="modal-footer" style="padding-top:0px;">
+                    <div id="divBuyer">拥有者：<span id="spanBuy"></span></div>
+                    <div id="divErrorMsg"></div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button id="btnBuy" type="button" class="btn btn-primary" onclick="buyStar();">
+                        购买星球
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+
+    <div class="modal fade" id="myModalMsg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!--正文-->
+
+                </div>
+                <div class="modal-footer" style="padding-top:0px;">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        关闭
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</body>
+
+</html>
