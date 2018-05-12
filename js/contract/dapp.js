@@ -1,9 +1,10 @@
 ﻿"use strict";
 
-var netPath = "https://testnet.nebulas.io";
+var netPath = "https://mainnet.nebulas.io";
+//var netPath = "https://testnet.nebulas.io";
 //var netPath = "https://api.nasscan.io";
 
-var contractAddress = "n1oeQz5HQqJ84b633EUkCfiUFXtHjJopRuf";
+var contractAddress = "n1yg8Lp5WgzVEncMgwtub5Egs72dDm3MTCn";
 
 //var contractAddress = "n21pjMjCFZL4ePUSEGY3rndG6ScBv9ZeXZY";
 
@@ -153,11 +154,10 @@ function funcIntervalQuery(name) {
                 intervalQuery = undefined;
             }
             else {
-                // error todo
-                $("#myModalMsg .modal-body").html("购买失败"+resp);
-                $("#myModalMsg").modal("show");
-                clearInterval(intervalQuery);
-                intervalQuery = undefined;
+                //可能延迟导致
+                //// error todo
+                //$("#myModalMsg .modal-body").html("购买失败"+resp);
+                //$("#myModalMsg").modal("show");
             }
         })
         .catch(function (err) {
