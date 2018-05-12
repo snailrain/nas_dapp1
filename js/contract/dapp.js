@@ -6,7 +6,6 @@ var netPath = "https://mainnet.nebulas.io";
 
 var contractAddress = "n1zJpSFiZYEzf6b7ntP1wNW9mPCbUsgDQEs";
 
-//var contractAddress = "n21pjMjCFZL4ePUSEGY3rndG6ScBv9ZeXZY";
 
 var serialNumber = "";
 var nebulas = require("nebulas"),

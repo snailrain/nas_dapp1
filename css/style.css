@@ -59,6 +59,9 @@
 #myModalLabel {
     font-weight:bold;
 }
+.modal-body {
+    word-wrap: break-word;
+}
 .modal-body textarea {
     width: 100%;
     resize: none;
