@@ -4,7 +4,7 @@ var netPath = "https://mainnet.nebulas.io";
 //var netPath = "https://testnet.nebulas.io";
 //var netPath = "https://api.nasscan.io";
 
-var contractAddress = "n1yg8Lp5WgzVEncMgwtub5Egs72dDm3MTCn";
+var contractAddress = "n1fm2oikN7hC9AZto6vSbzuJJT1YvDDHW5G";
 
 //var contractAddress = "n21pjMjCFZL4ePUSEGY3rndG6ScBv9ZeXZY";
 
