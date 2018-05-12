@@ -4,7 +4,7 @@ var netPath = "https://mainnet.nebulas.io";
 //var netPath = "https://testnet.nebulas.io";
 //var netPath = "https://api.nasscan.io";
 
-var contractAddress = "n1fm2oikN7hC9AZto6vSbzuJJT1YvDDHW5G";
+var contractAddress = "n1zJpSFiZYEzf6b7ntP1wNW9mPCbUsgDQEs";
 
 //var contractAddress = "n21pjMjCFZL4ePUSEGY3rndG6ScBv9ZeXZY";
 
@@ -101,7 +101,7 @@ function getStoryByGalaxy(callback)
                 var target = $(".starChain img[data-starid='" + story.storyItems[i].starId + "']");
                 target.addClass("tooltip-show");
                 //target.attr("data-toggle", "tooltip");
-                target.attr("title", story.storyItems[i].name);
+                target.attr("title", decodeURI(story.storyItems[i].name));
                 target.attr("data-placement", "top");
                 target.on('hide.bs.tooltip', function () {
                     return false;
@@ -121,11 +121,14 @@ function setStar(starId,name,story,author)
     var to = contractAddress;
     var value = "0";
     var callFunction = "add"
-    var callArgs = "[\"" + starId + "\",\"" + name + "\",\"" + story + "\",\"" + author + "\" ]"
+    var callArgs = "[\"" + starId + "\",\"" + encodeURI(name) + "\",\"" + encodeURI(story) + "\",\"" + encodeURI(author) + "\" ]"
 
     serialNumber = nebPay.call(to, value, callFunction, callArgs, {    //使用nebpay的call接口去调用合约,
         listener: cbPush        //设置listener, 处理交易返回信息
     });
+    if (intervalQuery) {
+        clearInterval(intervalQuery);
+    }
 
     intervalQuery = setInterval(function () {
         funcIntervalQuery(name);
@@ -196,9 +199,9 @@ function starClickEvent() {
     for (var i = 0; i < currentGalaxyStory.length; i++) {
         if (currentGalaxyStory[i].starId == starId) {
             isExist = true;
-            $("#myModalLabel").text(currentGalaxyStory[i].name);
-            $("#divStoryContent").text(currentGalaxyStory[i].story);
-            $("#spanBuy").text(currentGalaxyStory[i].author);
+            $("#myModalLabel").text(decodeURI(currentGalaxyStory[i].name));
+            $("#divStoryContent").text(decodeURI(currentGalaxyStory[i].story));
+            $("#spanBuy").text(decodeURI(currentGalaxyStory[i].author));
         }
     }
     if (isExist) {
@@ -300,3 +303,4 @@ function getCookie(cname) {
     }
     return "";
 }
+
