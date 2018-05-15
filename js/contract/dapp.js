@@ -4,7 +4,7 @@ var netPath = "https://mainnet.nebulas.io";
 //var netPath = "https://testnet.nebulas.io";
 //var netPath = "https://api.nasscan.io";
 
-var contractAddress = "n2312ys2EVtTcZmt7sZD87Lt5kA3cD54hM5";
+var contractAddress = "n1zJpSFiZYEzf6b7ntP1wNW9mPCbUsgDQEs";
 
 
 var serialNumber = "";
