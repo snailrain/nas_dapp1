@@ -4,7 +4,7 @@ var netPath = "https://mainnet.nebulas.io";
 //var netPath = "https://testnet.nebulas.io";
 //var netPath = "https://api.nasscan.io";
 
-var contractAddress = "n1zJpSFiZYEzf6b7ntP1wNW9mPCbUsgDQEs";
+var contractAddress = "n2312ys2EVtTcZmt7sZD87Lt5kA3cD54hM5";
 
 
 var serialNumber = "";
@@ -252,7 +252,7 @@ $(function () {
 
     if (getCookie("isFirst") != "1") {
         setCookie("isFirst", "1");
-        var desc = "此项目基于星云区块链。<br>您可以查看已占用的星球信息、购买/命名未占用的星球，以及赋予这个星球一个故事。<br>当然你喜欢一个姑娘，也可以买下一颗星星，并送给她~<br>作者微信：toseeme8";
+        var desc = "此项目基于星云区块链。<br>您可以查看已占用的星球信息、购买(当前是免费，只需要付旷工费即可)/命名未占用的星球，以及赋予这个星球一个故事。<br>当然你喜欢一个姑娘，也可以买下一颗星星，并送给她~<br>作者微信：toseeme8";
         if (typeof (webExtensionWallet) === "undefined") {
             desc += "<br>购买星球需安装官方钱包插件：<a target='_blank' href='https://github.com/ChengOrangeJu/WebExtensionWallet'>WebExtensionWallet</a>安装后刷新页面";
         }
