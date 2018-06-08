@@ -1,10 +1,13 @@
 ﻿"use strict";
 
-var netPath = "https://mainnet.nebulas.io";
-//var netPath = "https://testnet.nebulas.io";
+//var netPath = "https://mainnet.nebulas.io";
+var netPath = "https://testnet.nebulas.io";
 //var netPath = "https://api.nasscan.io";
 
-var contractAddress = "n1zJpSFiZYEzf6b7ntP1wNW9mPCbUsgDQEs";
+//主
+//var contractAddress = "n1zJpSFiZYEzf6b7ntP1wNW9mPCbUsgDQEs";
+//测试
+var contractAddress = "n1oa6qyJNUV2kB1aWmyJZwpc6b3frBoPR1t";
 
 
 var serialNumber = "";
